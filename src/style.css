@@ -116,7 +116,6 @@ li{
 }
 .NumberSum{
     color:var(--azul-oscuro);
-
 }
 .NumberCount{
     color: var(--rosado);
@@ -125,7 +124,7 @@ li{
 .AverageWordLength{
     color:var(--morado);
 }
-
+/*poner con data set :D
 /* Selector de IB */
 
 #reset-button {

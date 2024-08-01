@@ -1,4 +1,4 @@
-import analyzer from "./analyzer.js";
+import analyzer from "./analyzer.js"; //modulo de script
 
 document.addEventListener("DOMContentLoaded", () => {
   const userInput = document.getElementsByName("user-input")[0];
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //Primero contador de palabras
   const wordCountElement = document.querySelector(".WordCount");
   //Segundo contador de caracteres
-  const CharacterCountElement= document.querySelector(".CharacterCount");
+  const CharacterCountElement= document.querySelector ([data-testid ="character-count"]);
   //Tercero caracteres sin espacios
   const CharacterCountExcludingSpacesElement=document.querySelector(".CharacterCountExcludingSpaces");
   //Cuarto longitud media de caracteres

@@ -27,6 +27,7 @@ const analyzer = {
     // Eliminamos caracteres no alfanuméricos (excepto espacios) para contar la longitud total de caracteres
     const words = text.trim().split(/\s+/).filter(word => word.length > 0);
     const wordCount=words.length;
+    
     const CharacterCountExcludingSpaces = words.reduce((sum, word) => sum + word.length, 0);
     let AverageWordLength; 
     if (wordCount > 0) {
