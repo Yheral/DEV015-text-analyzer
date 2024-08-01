@@ -8,7 +8,6 @@
   --gris-medio: #cdcadd;
   --gris-oscuro: #333333;
   --negro: #000000;
-  --azul-claro: #00ff37;
   --azul-oscuro: rgb(0, 21, 139);
   --rosado: #ff00b3;
   --morado: rgb(174, 0, 255);
@@ -89,7 +88,7 @@ ul {
   justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
   flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si es necesario */
   padding: 0; /* Elimina el padding superior e inferior */
-  margin: 20px 400px; /* Mismo margen que la caja de textarea */
+  margin: 10px 370px; /* Mismo margen que la caja de textarea */
 
 }
 li{ 
@@ -97,34 +96,36 @@ li{
   font-family: Arial, sans-serif;
   background-color: #f0f0f0; /* Cambia el color de fondo */
   border-radius: 10px;
-  margin: 1px; /* Establece el margen (10px arriba y abajo, 0 a los lados) */
-  padding: 1px; /* Establece el padding */
+  margin: 3px; /* Establece el margen (10px arriba y abajo, 0 a los lados) */
+  padding: 3px; /* Establece el padding */
   list-style-type: none; /* Quita las viñetas */
-  border: 1px solid #000000; /* Agrega un borde */
   text-align: center;        /* Centrar el texto */
   box-shadow: 2 4px 8px rgba(0, 0, 0, 0.1); /* SOMBRA aplica una sombra sutil debajo del elemento, desplazada 4 píxeles hacia abajo y difusa con un radio de 8 píxeles. */
+  box-sizing: border-box;
   font-weight: bold; /* Hace que el texto sea más grueso */
 }
 /* Selectores CLASS */
-
 .CharacterCount{
-   color: rgb(47, 61, 61);
+   color: var(--gris-oscuro);
 }
 .WordCount{
-    color:#ff00b3;
+    color:var(--rojo);
 }
 .CharacterCountExcludingSpaces{
-    color:red;
+    color:var(--verde-jade);
 }
 .NumberSum{
-    color: blue;
+    color:var(--azul-oscuro);
+
 }
 .NumberCount{
-    color: rgb(174, 0, 255);
+    color: var(--rosado);
+
 }
 .AverageWordLength{
-    color:blue;
+    color:var(--morado);
 }
+
 /* Selector de IB */
 
 #reset-button {

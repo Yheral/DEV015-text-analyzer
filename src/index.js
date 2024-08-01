@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
   //Cuarto longitud media de caracteres
   const AverageWordLengthElement=document.querySelector(".AverageWordLength");
   //Quinto contar los numeros
-  let NumberCountElement=document.querySelector(".NumberCount");
+  const NumberCountElement=document.querySelector(".NumberCount");
   //Sexto suma números
-  let NumberSumElement=document.querySelector(".NumberSum");
+  const NumberSumElement=document.querySelector(".NumberSum");
 
 
   userInput.addEventListener("input",()=>{
@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const AverageWordLength = analyzer.getAverageWordLength(userInput.value);
     AverageWordLengthElement.textContent = `Promedio de longitud: ${AverageWordLength}`;
     //Contador de numeros
-    let NumberCount = analyzer.getNumberCount(userInput.value);
+    const NumberCount = analyzer.getNumberCount(userInput.value);
     NumberCountElement.textContent = `Conteo de números:${NumberCount}`;
     //Suma de números
-    let NumberSum = analyzer.getNumberSum(userInput.value);
+    const NumberSum = analyzer.getNumberSum(userInput.value);
     NumberSumElement.textContent = `Suma de números:${NumberSum}`;
   });
 
@@ -48,4 +48,5 @@ document.addEventListener("DOMContentLoaded", () => {
     AverageWordLengthElement.textContent = `Promedio de longitud: 0`;
     NumberCountElement.textContent = `Conteo de numeros: 0`;
     NumberSumElement.textContent= `Suma de números: 0`;
-  })});
+  });
+});
