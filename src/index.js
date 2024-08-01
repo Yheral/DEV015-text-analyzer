@@ -5,17 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
   //Introduce las constantes para cada item de métricas que necesitas
   //const items = document.querySelector("container ul li");
   //Primero contador de palabras
-  const wordCountElement = document.querySelector(".WordCount");
+  const wordCountElement = document.querySelector('[data-testid="word-count"]');
   //Segundo contador de caracteres
-  const CharacterCountElement= document.querySelector ([data-testid ="character-count"]);
+  const CharacterCountElement= document.querySelector ('[data-testid="character-count"]');
   //Tercero caracteres sin espacios
-  const CharacterCountExcludingSpacesElement=document.querySelector(".CharacterCountExcludingSpaces");
+  const characterNoSpacesCountElement=document.querySelector('[data-testid="character-no-spaces-count"]');
   //Cuarto longitud media de caracteres
-  const AverageWordLengthElement=document.querySelector(".AverageWordLength");
+  const wordLengthAverageElement=document.querySelector('[data-testid="word-length-average"]');
   //Quinto contar los numeros
-  const NumberCountElement=document.querySelector(".NumberCount");
+  const NumberCountElement=document.querySelector('[data-testid="number-count"]');
   //Sexto suma números
-  const NumberSumElement=document.querySelector(".NumberSum");
+  const NumberSumElement=document.querySelector('[data-testid="number-sum"]');
 
 
   userInput.addEventListener("input",()=>{
@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const CharacterCount = analyzer.getCharacterCount(userInput.value);
     CharacterCountElement.textContent = `Caracteres: ${CharacterCount}`;
     //Contador de caracteres sin espacios: CHECK
-    const CharacterCountExcludingSpaces = analyzer.getCharacterCountExcludingSpaces(userInput.value);
-    CharacterCountExcludingSpacesElement.textContent = `Caracteres sin espacios: ${CharacterCountExcludingSpaces}`;
+    const characterNoSpacesCount = analyzer.getCharacterCountExcludingSpaces(userInput.value);
+    characterNoSpacesCountElement.textContent = `Caracteres sin espacios: ${characterNoSpacesCount}`;
     //Contador de longitud media de palabras: CHECK pero veamos como ponerle dos decimales
-    const AverageWordLength = analyzer.getAverageWordLength(userInput.value);
-    AverageWordLengthElement.textContent = `Promedio de longitud: ${AverageWordLength}`;
+    const wordLengthAverage = analyzer.getAverageWordLength(userInput.value);
+    wordLengthAverageElement.textContent = `Promedio longitud: ${wordLengthAverage}`;
     //Contador de numeros
     const NumberCount = analyzer.getNumberCount(userInput.value);
     NumberCountElement.textContent = `Conteo de números:${NumberCount}`;
@@ -44,8 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
     userInput.value = "";
     wordCountElement.textContent = `Palabras: 0`;
     CharacterCountElement.textContent = `Caracteres: 0`;
-    CharacterCountExcludingSpacesElement.textContent = "Caracteres sin espacios: 0";
-    AverageWordLengthElement.textContent = `Promedio de longitud: 0`;
+    characterNoSpacesCountElement.textContent = "Caracteres sin espacios: 0";
+    wordLengthAverageElement.textContent = `Promedio de longitud: 0`;
     NumberCountElement.textContent = `Conteo de numeros: 0`;
     NumberSumElement.textContent= `Suma de números: 0`;
   });

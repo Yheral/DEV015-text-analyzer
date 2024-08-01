@@ -34,7 +34,6 @@ header {
     text-align: center;        /* Centrar el texto */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* SOMBRA aplica una sombra sutil debajo del elemento, desplazada 4 píxeles hacia abajo y difusa con un radio de 8 píxeles. */
     font-weight: bold; /* Hace que el texto sea más grueso */
-    animation: blink 1s infinite; /* Animación de parpadeo */
     display: flex; /* Establece el modo de visualización como flexbox */
     justify-content: center; /* Centra el contenido horizontalmente */
 }
@@ -48,8 +47,8 @@ textarea[name="user-input"] {
     font-family: Arial, sans-serif; /* Familia de fuentes */
     font-size: 16px; /* Tamaño de fuente */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del texto */
-    margin: 20px 350px; /* Espacio arriba y abajo, auto a los lados */
-    width: 80%; /* Ancho completo */
+    margin: 25px 380px; /* Espacio arriba y abajo, auto a los lados */
+    width: 90%; /* Ancho completo */
     max-width: 600px; /* Ancho máximo */
     box-sizing: border-box; /* Incluye padding y border en el ancho total */
 }
@@ -89,42 +88,27 @@ ul {
   flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si es necesario */
   padding: 0; /* Elimina el padding superior e inferior */
   margin: 10px 370px; /* Mismo margen que la caja de textarea */
-
 }
-li{ 
-  color: var(--negro);              /* Color de texto*/
+.lista { 
+  padding: 3px; /* Establece el padding */
+  color: var(--negro); /* Color de texto*/
   font-family: Arial, sans-serif;
   background-color: #f0f0f0; /* Cambia el color de fondo */
   border-radius: 10px;
   margin: 3px; /* Establece el margen (10px arriba y abajo, 0 a los lados) */
-  padding: 3px; /* Establece el padding */
   list-style-type: none; /* Quita las viñetas */
   text-align: center;        /* Centrar el texto */
   box-shadow: 2 4px 8px rgba(0, 0, 0, 0.1); /* SOMBRA aplica una sombra sutil debajo del elemento, desplazada 4 píxeles hacia abajo y difusa con un radio de 8 píxeles. */
   box-sizing: border-box;
   font-weight: bold; /* Hace que el texto sea más grueso */
 }
-/* Selectores CLASS */
-.CharacterCount{
-   color: var(--gris-oscuro);
+li[data-testid="word-length-average"] {
+  color: var(--morado);
 }
-.WordCount{
-    color:var(--rojo);
-}
-.CharacterCountExcludingSpaces{
-    color:var(--verde-jade);
-}
-.NumberSum{
-    color:var(--azul-oscuro);
-}
-.NumberCount{
-    color: var(--rosado);
 
+li[data-testid="number-count"] {
+  color: var(--rosado);
 }
-.AverageWordLength{
-    color:var(--morado);
-}
-/*poner con data set :D
 /* Selector de IB */
 
 #reset-button {

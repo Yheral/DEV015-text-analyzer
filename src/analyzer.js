@@ -17,8 +17,8 @@ const analyzer = {
     //text.replace(...): Es como usar una goma de borrar en el texto. 
     ///\s+/g: Le dice a la goma que borre todos los espacios y saltos de línea.
     //'': Esto significa que lo que borraremos será reemplazado por nada (es decir, se eliminará).
-    const CharacterCountExcludingSpaces = text.replace(/\s+|[^a-zA-Z0-9]/g, '').length; //NOTA DE ERROR EN EL TEST: antes contaba la puntuación \s+|[^a-zA-Z0-9]/g, ''
-    return CharacterCountExcludingSpaces;
+    const CharacterNoSpacesCount = text.replace(/\s+|[^a-zA-Z0-9]/g, '').length; //NOTA DE ERROR EN EL TEST: antes contaba la puntuación \s+|[^a-zA-Z0-9]/g, ''
+    return CharacterNoSpacesCount;
   },
   getAverageWordLength: (text) => {  
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro text de tipo string.
@@ -27,16 +27,17 @@ const analyzer = {
     // Eliminamos caracteres no alfanuméricos (excepto espacios) para contar la longitud total de caracteres
     const words = text.trim().split(/\s+/).filter(word => word.length > 0);
     const wordCount=words.length;
-    
+
     const CharacterCountExcludingSpaces = words.reduce((sum, word) => sum + word.length, 0);
-    let AverageWordLength; 
+    let wordLengthAverage; 
     if (wordCount > 0) {
-      AverageWordLength = CharacterCountExcludingSpaces / wordCount;
+      wordLengthAverage = CharacterCountExcludingSpaces / wordCount;
     } else {
-      AverageWordLength = 0;
+      wordLengthAverage = 0;
     }
-    return parseFloat(AverageWordLength.toFixed(2));
+    return parseFloat(wordLengthAverage.toFixed(2));
   },
+
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
     const NumberList= text.match(/\b\d+(\.\d+)?\b/g); //NOTA DESCUBRIMIENTO: Con el + cuenta numeros y no digitos. (/\b\d+(\.\d+)?\b/g) Busca números enteros y decimales
